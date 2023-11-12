@@ -151,6 +151,7 @@ header.shadow {
     clip-path: polygon(100% 0, 100% 50%, 86% 99%, 0% 100%, 0% 50%, 10% 0%);
 }
 
+
 .nuevos-modelos {
     margin-top: 2rem;
 }
@@ -230,6 +231,65 @@ header.shadow {
     margin-top: 2rem;
 }
 
+@media (max-width: 479px) {
+    .nuevos-modelos .caja:hover .bx-cart-alt{
+        top: -345px;
+    }
+
+    .titulo h1 {
+        font-size: 1.5rem;
+    }
+
+    .caja {
+        width: 290px;
+        height: 440px;
+        padding: 0;
+    }
+
+    .caja img {
+        width: 280px;
+        height: 430px;
+    }
+
+    .caja .contenido {
+        width: 280px;
+        height: 90px;
+        top: 340px;
+        left: 0;
+    }
+
+    .caja:hover .contenido {
+        width: 270px;
+        height: 80px;
+        top: 345px;
+        left: 5px;
+    }
+
+    .caja .contenido h2 {
+        font-size: 0.75rem;
+    }
+    
+    .caja .contenido h3 {
+        font-size: 1rem;
+    }
+
+    .caja .bx-cart-alt{
+        top: -330px;
+        right: 10px;
+    }
+
+    .caja:hover .bx-cart-alt{
+        top: -340px;
+        right: 0px;
+    }
+
+    .nuestros-productos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 /* Footer */
 
 .footer {
@@ -243,7 +303,7 @@ header.shadow {
     flex-direction: column;
 }
 
-.footer-box h2 {
+.footer-box h3 {
     font-size: 1.2rem;
     font-weight: 600;
     margin-bottom: 1rem;
@@ -259,10 +319,6 @@ header.shadow {
 .footer-box i:hover {
     color: var(--second-color);
     cursor: pointer;
-}
-
-.footer-box h3 {
-    padding-bottom: 1rem;
 }
 
 .footer-box-logo {
@@ -296,4 +352,50 @@ header.shadow {
 .copyright {
     text-align: center;
     padding: 20px;
+}
+
+/* Responsive */
+@media (max-width: 479px) {
+    .nav {
+        flex-direction: column;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    .inicio {
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .inicio h1 {
+        font-size: var(--small-font);
+    }
+
+    .inicio h2 {
+        font-size: 20px;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-box {
+        align-items: center;
+    }
+
+    .logo_footer {
+        width: 150px;
+    }
+
+    .footer-box h3 {
+        font-size: 1.3rem;
+        padding-top: 1rem;
+    }
 }

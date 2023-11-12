@@ -1,13 +1,3 @@
-/* Swipper */
-var swiper = new Swiper(".nuevos-modelos", {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-    },
-});
-
 /* Dark mode */
 let darkmode = document.querySelector('#darkmode');
 
@@ -45,3 +35,28 @@ let header = document.querySelector("header");
 window.addEventListener('scroll', () => {
     header.classList.toggle('shadow', window.scrollY > 0);
 });
+
+/* Responsive */
+const windowWidth = window.innerWidth;
+
+/* Swipper */
+if (windowWidth < 480) {
+    var swiper = new Swiper(".nuevos-modelos", {
+        slidesPerView: 1,
+        centeredSlides: true,
+        spaceBetween: 5,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+    });
+} else {
+    var swiper = new Swiper(".nuevos-modelos", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+    });
+}
