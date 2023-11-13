@@ -60,7 +60,7 @@ if (windowWidth < 480) {
             disableOnInteraction: false,
         },
     });
-} else if (windowWidth < 769) {
+} else if (windowWidth < 1025) {
     var swiper = new Swiper(".nuevos-modelos", {
         slidesPerView: 2,
         spaceBetween: 30,
