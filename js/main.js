@@ -36,6 +36,16 @@ window.addEventListener('scroll', () => {
     header.classList.toggle('shadow', window.scrollY > 0);
 });
 
+let navbar = document.querySelector('.navbar');
+
+document.querySelector('#menu-icon').onclick = () => {
+    navbar.classList.toggle('active');
+}
+
+window.onscroll = () => {
+    navbar.classList.remove('active');
+}
+
 /* Responsive */
 const windowWidth = window.innerWidth;
 
@@ -45,6 +55,15 @@ if (windowWidth < 480) {
         slidesPerView: 1,
         centeredSlides: true,
         spaceBetween: 5,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+    });
+} else if (windowWidth < 769) {
+    var swiper = new Swiper(".nuevos-modelos", {
+        slidesPerView: 2,
+        spaceBetween: 30,
         autoplay: {
             delay: 2500,
             disableOnInteraction: false,
