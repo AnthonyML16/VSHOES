@@ -2,7 +2,6 @@
 let darkmode = document.querySelector('#darkmode');
 
 function cambiarLogo() {
-    /* document.getElementById("logo").src = "img/isotipo_white.png"; */
     const imagenes = document.querySelectorAll(".logo_iso");
     for (const imagen of imagenes) {
         imagen.src = "img/isotipo_white.png";
@@ -10,7 +9,6 @@ function cambiarLogo() {
 }
 
 function cambiarLogoOriginal() {
-    /* document.getElementById("logo").src = "img/isotipo_white.png"; */
     const imagenes = document.querySelectorAll(".logo_iso");
     for (const imagen of imagenes) {
         imagen.src = "img/isotipo_black.png";
